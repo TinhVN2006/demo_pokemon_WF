@@ -80,10 +80,12 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(367, 30);
             this.progressBar1.TabIndex = 2;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // chieu2
             // 
             this.chieu2.BackColor = System.Drawing.Color.White;
+            this.chieu2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chieu2.Location = new System.Drawing.Point(609, 108);
             this.chieu2.Name = "chieu2";
             this.chieu2.Size = new System.Drawing.Size(337, 79);
@@ -95,6 +97,8 @@
             // chieu1
             // 
             this.chieu1.BackColor = System.Drawing.Color.White;
+            this.chieu1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chieu1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.chieu1.Location = new System.Drawing.Point(609, 19);
             this.chieu1.Name = "chieu1";
             this.chieu1.Size = new System.Drawing.Size(337, 79);
@@ -173,6 +177,7 @@
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(210, 26);
             this.axWindowsMediaPlayer1.TabIndex = 4;
+            this.axWindowsMediaPlayer1.Visible = false;
             // 
             // Fight
             // 
@@ -180,6 +185,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.BackgroundImage = global::PokemonProject.Properties.Resources.Fight;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.chieu1;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.pictureBox3);
@@ -188,6 +195,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Fight";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fight";
             this.Load += new System.EventHandler(this.Fight_Load);
             this.groupBox1.ResumeLayout(false);

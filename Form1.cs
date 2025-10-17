@@ -15,38 +15,82 @@ namespace PokemonProject
         public Sanh()
         {
             InitializeComponent();
+            this.Resize += Sanh_Resize; // Gọi lại khi thay đổi kích thước
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = "Music.mp3";
             axWindowsMediaPlayer1.settings.setMode("loop", true);
             axWindowsMediaPlayer1.Ctlcontrols.play();
+
+            // Gắn sự kiện hover
             Play.MouseEnter += MouseEnter;
             Play.MouseLeave += MouseLeave;
-            SelectPoke.MouseEnter += MouseEnter;
-            SelectPoke.MouseLeave += MouseLeave;
             Exit.MouseEnter += MouseEnter1;
             Exit.MouseLeave += MouseLeave;
+
+            
+            SetupButtonStyle(Play);
+            SetupButtonStyle(SelectPoke);
+            SetupButtonStyle(Exit);
+
+            
+            CenterButtons();
         }
+
+        // Hàm bo tròn và làm mờ nền
+        private void SetupButtonStyle(Button btn)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = Color.FromArgb(100, Color.White); // Nền mờ trắng
+            btn.Region = System.Drawing.Region.FromHrgn(
+                CreateRoundRectRgn(0, 0, btn.Width, btn.Height, 25, 25)); // Bo góc 25px
+        }
+
+        //Hàm canh giữa các nút theo kích thước form
+        private void CenterButtons()
+        {
+            int spacing = 20;
+            int totalHeight = Play.Height + SelectPoke.Height + Exit.Height + spacing * 2;
+            int startY = (this.ClientSize.Height - totalHeight) / 2;
+
+            Play.Left = (this.ClientSize.Width - Play.Width) / 2;
+            Play.Top = startY;
+
+            Exit.Left = (this.ClientSize.Width - Exit.Width) / 2;
+            Exit.Top = Play.Bottom + spacing;
+        }
+
+        // Cập nhật vị trí khi đổi kích thước
+        private void Sanh_Resize(object sender, EventArgs e)
+        {
+            CenterButtons();
+        }
+
+        // Sự kiện hover
         private void MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            btn.BackColor = Color.Green;        
-            btn.ForeColor = Color.White;       
+            btn.BackColor = Color.FromArgb(180, 0, 128, 0);  //Xanh lá trong mờ
+            btn.ForeColor = Color.White;
         }
+
         private void MouseEnter1(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            btn.BackColor = Color.Red;         
-            btn.ForeColor = Color.White;       
+            btn.BackColor = Color.FromArgb(180, 255, 0, 0);  // Đỏ trong mờ
+            btn.ForeColor = Color.White;
         }
 
         private void MouseLeave(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            btn.BackColor = SystemColors.Control;
+            btn.BackColor = Color.FromArgb(100, Color.White);
             btn.ForeColor = SystemColors.ControlText;
         }
+
         private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -58,17 +102,23 @@ namespace PokemonProject
 
         private void Play_Click(object sender, EventArgs e)
         {
-            Fight form2 = new Fight();
-            form2.FormClosed += (s, args) => this.Show(); // Khi form2 đóng sẽ hiển thị lại form1
+            Manchoi form2 = new Manchoi();
+            form2.FormClosed += (s, args) => this.Show();
             form2.Show();
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             this.Hide();
         }
 
-        private void SelectPoke_Click(object sender, EventArgs e)
-        {
-            ChonPoke poke = new ChonPoke();
-            poke.Show();
-        }
+        // Dùng API để bo tròn góc
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
     }
 }

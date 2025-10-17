@@ -21,21 +21,44 @@ namespace PokemonProject
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn chọn Charmander không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes) {
+                Fight fightForm = new Fight();
+                fightForm.Show();
+                this.Close();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn chọn Bulbasaur không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Fight fightForm = new Fight();
+                fightForm.Show();
+                this.Close();
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn chọn Squirtle không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Fight fightForm = new Fight();
+                fightForm.Show();
+                this.Close();
+            }
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn chọn Pikachu không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Fight fightForm = new Fight();
+                fightForm.Show();
+                this.Close();
+            }
         }
     }
 }

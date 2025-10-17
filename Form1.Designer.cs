@@ -38,9 +38,10 @@
             // 
             // Play
             // 
-            this.Play.Location = new System.Drawing.Point(410, 282);
+            this.Play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Play.Location = new System.Drawing.Point(360, 241);
             this.Play.Name = "Play";
-            this.Play.Size = new System.Drawing.Size(159, 63);
+            this.Play.Size = new System.Drawing.Size(272, 135);
             this.Play.TabIndex = 0;
             this.Play.Text = "Chơi Ngay";
             this.Play.UseVisualStyleBackColor = true;
@@ -48,6 +49,7 @@
             // 
             // Exit
             // 
+            this.Exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Exit.Location = new System.Drawing.Point(410, 511);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(159, 63);
@@ -58,13 +60,11 @@
             // 
             // SelectPoke
             // 
-            this.SelectPoke.Location = new System.Drawing.Point(410, 389);
+            this.SelectPoke.Location = new System.Drawing.Point(0, 0);
+            this.SelectPoke.Margin = new System.Windows.Forms.Padding(2);
             this.SelectPoke.Name = "SelectPoke";
-            this.SelectPoke.Size = new System.Drawing.Size(159, 63);
-            this.SelectPoke.TabIndex = 2;
-            this.SelectPoke.Text = "Chọn Pokemon";
-            this.SelectPoke.UseVisualStyleBackColor = true;
-            this.SelectPoke.Click += new System.EventHandler(this.SelectPoke_Click);
+            this.SelectPoke.Size = new System.Drawing.Size(56, 19);
+            this.SelectPoke.TabIndex = 4;
             // 
             // axWindowsMediaPlayer1
             // 
@@ -74,19 +74,25 @@
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(228, 34);
             this.axWindowsMediaPlayer1.TabIndex = 3;
+            this.axWindowsMediaPlayer1.Visible = false;
             // 
             // Sanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PokemonProject.Properties.Resources.R1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.SelectPoke);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Play);
+            this.DoubleBuffered = true;
             this.Name = "Sanh";
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Sanh";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
