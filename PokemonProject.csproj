@@ -46,51 +46,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChonPoke.cs">
+    <Compile Include="Forms\ChonPoke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChonPoke.Designer.cs">
+    <Compile Include="Forms\ChonPoke.Designer.cs">
       <DependentUpon>ChonPoke.cs</DependentUpon>
     </Compile>
-    <Compile Include="End.cs">
+    <Compile Include="Forms\End.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="End.Designer.cs">
+    <Compile Include="Forms\End.Designer.cs">
       <DependentUpon>End.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fight.cs">
+    <Compile Include="Forms\Fight.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Fight.Designer.cs">
+    <Compile Include="Forms\Fight.Designer.cs">
       <DependentUpon>Fight.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manchoi.cs">
+    <Compile Include="Forms\Manchoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manchoi.Designer.cs">
+    <Compile Include="Forms\Manchoi.Designer.cs">
       <DependentUpon>Manchoi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChonPoke.resx">
+    <EmbeddedResource Include="Forms\ChonPoke.resx">
       <DependentUpon>ChonPoke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="End.resx">
+    <EmbeddedResource Include="Forms\End.resx">
       <DependentUpon>End.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fight.resx">
+    <EmbeddedResource Include="Forms\Fight.resx">
       <DependentUpon>Fight.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manchoi.resx">
+    <EmbeddedResource Include="Forms\Manchoi.resx">
       <DependentUpon>Manchoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -112,37 +112,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Images\Thanks You For Playing(1)(1).png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\R.jpg" />
+    <None Include="Resources\Images\Bulbasaur.png" />
+    <None Include="Resources\Images\charmander.png" />
+    <None Include="Resources\Images\Fight.jpg" />
+    <None Include="Resources\Images\Fight1.jpg" />
+    <None Include="Resources\Images\forestback.png" />
+    <None Include="Resources\Images\GrassAtk.png" />
+    <None Include="Resources\Images\login.png" />
+    <None Include="Resources\Images\logo.png" />
+    <None Include="Resources\Images\man1-removebg-preview.png" />
+    <None Include="Resources\Images\man2-removebg-preview.png" />
+    <None Include="Resources\Images\man3-removebg-preview.png" />
+    <None Include="Resources\Images\pikachu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\R.png" />
+    <None Include="Resources\Images\R.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fight.mp3">
+    <Content Include="Resources\Audio\Fight.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Music.mp3">
+    <Content Include="Resources\Audio\Music.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Thanks You For Playing%281%29%281%29.png" />
-    <None Include="Resources\man3-removebg-preview.png" />
-    <None Include="Resources\man2-removebg-preview.png" />
-    <None Include="Resources\man1-removebg-preview.png" />
-    <None Include="Resources\forestback.png" />
-    <None Include="Resources\logo.png" />
-    <None Include="Resources\login.png" />
-    <None Include="Resources\pikachu.png" />
-    <None Include="Resources\squirtle.png" />
-    <None Include="Resources\Fight1.jpg" />
-    <None Include="Resources\GrassAtk.png" />
-    <None Include="Resources\Fight.jpg" />
-    <None Include="Resources\Bulbasaur.png" />
-    <None Include="Resources\charmander.png" />
+    <None Include="Resources\Images\R.png" />
+    <None Include="Resources\Images\squirtle.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxWMPLib">
@@ -162,6 +162,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
