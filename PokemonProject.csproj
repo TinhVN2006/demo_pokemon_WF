@@ -52,12 +52,6 @@
     <Compile Include="ChonPoke.Designer.cs">
       <DependentUpon>ChonPoke.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dangky.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dangky.Designer.cs">
-      <DependentUpon>Dangky.cs</DependentUpon>
-    </Compile>
     <Compile Include="End.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +70,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manchoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +81,6 @@
     <EmbeddedResource Include="ChonPoke.resx">
       <DependentUpon>ChonPoke.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dangky.resx">
-      <DependentUpon>Dangky.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="End.resx">
       <DependentUpon>End.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manchoi.resx">
       <DependentUpon>Manchoi.cs</DependentUpon>
