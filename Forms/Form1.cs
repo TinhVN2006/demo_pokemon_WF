@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PokemonProject
+namespace PokemonProject.Forms
 {
     public partial class Sanh : Form
     {

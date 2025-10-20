@@ -1,4 +1,4 @@
-﻿namespace PokemonProject
+﻿namespace PokemonProject.Forms
 {
     partial class Manchoi
     {

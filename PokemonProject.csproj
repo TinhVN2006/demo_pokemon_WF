@@ -76,6 +76,7 @@
     <Compile Include="Forms\Manchoi.Designer.cs">
       <DependentUpon>Manchoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Temp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ChonPoke.resx">
@@ -162,9 +163,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
