@@ -1,6 +1,6 @@
 ﻿namespace PokemonProject.Forms
 {
-    partial class Manchoi
+    partial class StageForm
     {
         /// <summary>
         /// Required designer variable.

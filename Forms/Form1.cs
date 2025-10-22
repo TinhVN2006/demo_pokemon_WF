@@ -102,7 +102,7 @@ namespace PokemonProject.Forms
 
         private void Play_Click(object sender, EventArgs e)
         {
-            Manchoi form2 = new Manchoi();
+            StageForm form2 = new StageForm();
             form2.FormClosed += (s, args) => this.Show();
             form2.Show();
             axWindowsMediaPlayer1.Ctlcontrols.stop();

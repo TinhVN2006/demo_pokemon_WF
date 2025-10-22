@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PokemonProject.Forms
 {
-    public partial class Manchoi : Form
+    public partial class StageForm : Form
     {
-        public Manchoi()
+        public StageForm()
         {
             InitializeComponent();
         }
