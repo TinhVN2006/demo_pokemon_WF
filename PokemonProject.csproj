@@ -76,6 +76,8 @@
     <Compile Include="Forms\StageForm.Designer.cs">
       <DependentUpon>StageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Skill.cs" />
+    <Compile Include="Models\Systems.cs" />
     <Compile Include="Models\Temp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
