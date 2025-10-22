@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PokemonProject.Forms
 {
-    public partial class ChonPoke : Form
+    public partial class PickPokemonForm : Form
     {
-        public ChonPoke()
+        public PickPokemonForm()
         {
             InitializeComponent();
         }

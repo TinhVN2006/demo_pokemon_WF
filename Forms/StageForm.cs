@@ -20,7 +20,7 @@ namespace PokemonProject.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChonPoke poke = new ChonPoke();
+            PickPokemonForm poke = new PickPokemonForm();
             poke.Show();
             this.Enabled = false;
             poke.FormClosed += (s, args) =>
@@ -33,7 +33,7 @@ namespace PokemonProject.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ChonPoke poke = new ChonPoke();
+            PickPokemonForm poke = new PickPokemonForm();
             poke.Show();
         }
 
@@ -41,12 +41,12 @@ namespace PokemonProject.Forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ChonPoke poke = new ChonPoke();
+            PickPokemonForm poke = new PickPokemonForm();
             poke.Show();
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ChonPoke poke = new ChonPoke();
+            PickPokemonForm poke = new PickPokemonForm();
             poke.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace PokemonProject.Forms
 {
-    partial class ChonPoke
+    partial class PickPokemonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -110,7 +110,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "ChonPoke";
+            this.Name = "PickPokemonForm";
             this.Text = "ChonPoke";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

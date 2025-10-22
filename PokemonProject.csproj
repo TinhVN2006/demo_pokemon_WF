@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ChonPoke.cs">
+    <Compile Include="Forms\PickPokemonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ChonPoke.Designer.cs">
-      <DependentUpon>ChonPoke.cs</DependentUpon>
+    <Compile Include="Forms\PickPokemonForm.Designer.cs">
+      <DependentUpon>PickPokemonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\End.cs">
       <SubType>Form</SubType>
@@ -81,8 +81,8 @@
     <Compile Include="Models\Temp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ChonPoke.resx">
-      <DependentUpon>ChonPoke.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PickPokemonForm.resx">
+      <DependentUpon>PickPokemonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\End.resx">
       <DependentUpon>End.cs</DependentUpon>
